@@ -149,7 +149,7 @@ We extracted **27 variables across six domains**:
 
 <p align="center">
   <b>Figure</b>: PRISMA flow diagram<br>
-  <img src="figures/prisma.png" width="700"/>
+  <img src="figures/prisma.png" width="400"/>
 </p>
 
 ---
