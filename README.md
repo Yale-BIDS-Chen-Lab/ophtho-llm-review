@@ -27,7 +27,7 @@ Here, we briefly summarize key findings from our systematic review; more detaile
 
 <p align="center">
   <b>Figure</b>: Publication trend stratified by modality & study aim<br>
-  <img src="figures/" width="700"/>
+  <img src="figures/trends.png" width="700"/>
 </p>
 
 ---
