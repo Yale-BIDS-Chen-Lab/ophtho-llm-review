@@ -70,7 +70,7 @@ We organize use cases into **3 major categories → 9 fine-grained subcategories
 
 <p align="center">
   <b>Figure</b>: Task taxonomy overview<br>
-  <img src="figures/.png" width="700"/>
+  <img src="figures/readiness.png" width="700"/>
 </p>
 
 ---
