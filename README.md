@@ -204,6 +204,20 @@ We catalog the datasets and resources used across the systematic review to facil
 
 ---
 
+
+## 🙌 Citation
+
+If this repository is useful for your work, please cite:
+
+```bash
+@article{kim2026far,
+  title={How Far Have Large Language Models Advanced in Ophthalmology? A Systematic Review of Their Development, Evaluation, and Readiness for Clinical Use},
+  author={Kim, Hyunjae and Yin, Yu and Cao, Zhiyuan and Liu, Chen and Li, Anran and Chen, Zhen and Ai, Xuguang and Chung, Younjoon and Ma, Fan and Peng, Xueping and others},
+  year={2026}
+}
+```
+---
+
 ## 📬 Contact
 
 For questions or suggestions, feel free to open an issue or email us (`hyunjae.kim@yale.edu` or `qingyu.chen@yale.edu`).
