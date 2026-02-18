@@ -6,7 +6,7 @@
 
 ## 📖 About This Project
 
-This repository serves as the official repository for our systematic review: **"[How Far Have Large Language Models Advanced in Ophthalmology? A Systematic Review of Their Development, Evaluation, and Readiness for Clinical Use.](#)"** The preprint will be available soon.
+This repository serves as the official repository for our systematic review: **"[How Far Have Large Language Models Advanced in Ophthalmology? A Systematic Review of Their Development, Evaluation, and Readiness for Clinical Use.](https://doi.org/10.21203/rs.3.rs-8819770/v1)"**
 
 Our systematic review synthesizes literature from **January 1, 2022, to April 1, 2025** using rigorous inclusion criteria from biomedical databases (PubMed/PMC, Scopus, Embase). However, the field of AI is moving faster than traditional publishing cycles. Also, the biomedical databases may not comprehensively capture relevant work from the AI or computer science literature, including preprints hosted on platforms such as arXiv. 
 
