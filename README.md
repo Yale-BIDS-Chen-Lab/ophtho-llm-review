@@ -26,7 +26,7 @@ Here, we briefly summarize key findings from our systematic review; more detaile
 
 <p align="center">
   <b>Figure</b>: Publication trend stratified by modality & study aim<br>
-  <img src="figures/trends_v2.png" width="700"/>
+  <img src="figures/trends_v2.png" width="750"/>
 </p>
 
 ---
@@ -44,7 +44,7 @@ Here, we briefly summarize key findings from our systematic review; more detaile
 
 <p align="center">
   <b>Figure</b>: Backbone LLM distribution (text-only vs multimodal) & Adaptation strategies (no training vs instruction tuning vs finetuning vs pretraining)<br>
-  <img src="figures/model_distribution_v2.png" width="700"/>
+  <img src="figures/model_distribution_v2.png" width="750"/>
 </p>
 
 ---
@@ -66,7 +66,7 @@ We organize use cases into **two major categories → eight fine-grained subcate
 
 <p align="center">
   <b>Figure</b>: Task taxonomy overview<br>
-  <img src="figures/readiness_2.png" width="700"/>
+  <img src="figures/readiness_v2.png" width="750"/>
 </p>
 
 ---
