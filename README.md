@@ -6,12 +6,12 @@
 
 ## 📖 About This Project
 
-This repository serves as the official repository for our systematic review: **"[How Far Have Large Language Models Advanced in Ophthalmology? A Systematic Review of Their Development, Evaluation, and Readiness for Clinical Use.](https://doi.org/10.21203/rs.3.rs-8819770/v1)"**
+This repository serves as the official repository for our systematic review: **"[How Far Have Large Language Models Advanced in Ophthalmology? A Systematic Review of Their Development, Evaluation, and Readiness for Clinical Use.](https://doi.org/10.21203/rs.3.rs-8819770/v2)"**
 
-Our systematic review synthesizes literature from **January 1, 2022, to April 1, 2025** using rigorous inclusion criteria from biomedical databases (PubMed/PMC, Scopus, Embase). However, the field of AI is moving faster than traditional publishing cycles. Also, the biomedical databases may not comprehensively capture relevant work from the AI or computer science literature, including preprints hosted on platforms such as arXiv. 
+Our systematic review synthesizes literature from **January 1, 2022, to December 1, 2025** using rigorous inclusion criteria from biomedical databases (PubMed/PMC, Scopus, Embase). However, the field of AI is moving faster than traditional publishing cycles. Also, the biomedical databases may not comprehensively capture relevant work from the AI or computer science literature, including preprints hosted on platforms such as arXiv. 
 
 **This repository aims to bridge that gap by:**
-1.  **Continuously Updating:** Tracking new studies published after April 2025.
+1.  **Continuously Updating:** Tracking new studies published after December 2025.
 2.  **Expanding Scope:** Curating relevant AI/CS conference papers (e.g., CVPR, NeurIPS) and preprints (arXiv) that fall outside standard biomedical indices but are critical to the field.
 3.  **Open Data:** Providing the granular data extraction (27 variables) for all studies included in the review with fine-grained analysis. 
 ---
@@ -21,13 +21,12 @@ Our systematic review synthesizes literature from **January 1, 2022, to April 1,
 Here, we briefly summarize key findings from our systematic review; more detailed quantitative results will be provided in the forthcoming preprint.
 
 ### 1) Publication landscape
-- Total included studies: **N = 91**  
-- Research grew rapidly through 2023–2024, with a modest drop in H1 2025.  
-- Most studies are published in ophthalmology / medical informatics venues; relatively few in broader AI venues.
+- Total included studies: **N = 157**  
+- Research grew steadily.  
 
 <p align="center">
   <b>Figure</b>: Publication trend stratified by modality & study aim<br>
-  <img src="figures/trends.png" width="700"/>
+  <img src="figures/trends_v2.png" width="700"/>
 </p>
 
 ---
@@ -45,18 +44,19 @@ Here, we briefly summarize key findings from our systematic review; more detaile
 
 <p align="center">
   <b>Figure</b>: Backbone LLM distribution (text-only vs multimodal) & Adaptation strategies (no training vs instruction tuning vs finetuning vs pretraining)<br>
-  <img src="figures/model_distribution.png" width="700"/>
+  <img src="figures/model_distribution_v2.png" width="700"/>
 </p>
 
 ---
 
-### 4) Clinical task taxonomy (9 subcategories)
-We organize use cases into **3 major categories → 9 fine-grained subcategories**:
+### 4) Clinical task taxonomy (eight subcategories)
+We organize use cases into **two major categories → eight fine-grained subcategories**:
 
 **A. Clinical workflow**
 - Screening or diagnosis  
 - Treatment planning & recommendation  
 - Report generation
+- Prognosis & output prediction
 
 **B. Patient support**
 - Patient question answering  
@@ -64,13 +64,9 @@ We organize use cases into **3 major categories → 9 fine-grained subcategories
 - Consultation or interview  
 - Physician recommendation
 
-**C. Education & training**
-- Exam taking  
-- Medical education & learning support
-
 <p align="center">
   <b>Figure</b>: Task taxonomy overview<br>
-  <img src="figures/readiness.png" width="700"/>
+  <img src="figures/readiness_2.png" width="700"/>
 </p>
 
 ---
@@ -79,20 +75,20 @@ We organize use cases into **3 major categories → 9 fine-grained subcategories
 We stratify evaluation rigor into five levels:
 1. Benchmark evaluation  
 2. Expert evaluation  
-3. Retrospective clinical validation  
+3. Retrospective validation  
 4. Prospective pilot study  
 5. Full clinical trial
 
 Key observations:
 - Benchmark and expert evaluations are common.
-- Retrospective validation and prospective pilots are rare.
+- Retrospective validation and prospective pilots are relatively rare.
 - **No full clinical trials** in the included literature.
 
 ---
 
 ## Methods
 ### Search strategy
-- Time window: 2022-01-01 to 2025-04-01  
+- Time window: 2022-01-01 to 2025-12-01  
 - Databases: PubMed/PMC, Scopus, Embase  
 - Query: 
 ```text
@@ -109,7 +105,7 @@ Key observations:
     pretrain* OR pre-train* OR finetun* OR fine-tun* OR "instruction tun*" OR train*
   )
   AND
-  (2022/01/01:2025/04/01[dp])
+  (2022/01/01:2025/12/01[dp])
   NOT review[pt]
   NOT systematic[sb]
   NOT clinical trial[pt]
@@ -120,16 +116,18 @@ Key observations:
 
 ### Study selection
 Studies were included if they met all of the following criteria:
-(1) Primary research articles that were publicly available (published or preprint) within the search window (January 1, 2022 – April 1, 2025). 
-(2) The study primarily developed, evaluated, or utilized LLMs for ophthalmology-related applications.
-LLMs had to be a central component of the study, either as the main target of evaluation or as a core methodological element, rather than being used solely as a baseline or comparison.
-(3) Multimodal models were considered eligible when an LLM-based architecture was used as the primary component.
+(1) Primary research articles that were publicly available (published or preprint) within the search window (January 1, 2022 – December 1, 2025).
+(2) The study primarily developed, evaluated, or utilized LLMs for ophthalmology-related applications. LLMs had to be a central component of the study, either as the main target of evaluation or as a core methodological element, rather than being used solely as a baseline or comparison.
+(3) Multimodal models were considered eligible when an LLM-based architecture was used as the primary component. Vision-language models without an LLM backbone, such as CLIP41, were excluded.
+(4) General medical studies spanning multiple specialties were included only when ophthalmology-specific tasks, datasets, evaluations, or analyses were presented as distinct components of the study.
+(5) Studies in optometry or vision science were included if they involved ophthalmology-related LLM applications.
 
 Studies were excluded if they met any of the following:
 (1) Non–primary research articles, including reviews, meta-analyses, editorials, perspectives, correspondence, and study protocols.
 (2) Studies not published in English.
 (3) Conference abstracts without a corresponding full-text publication.
 (4) Multimodal models that did not incorporate LLM architectures as their primary backbone, and vision-only models.
+(5) Studies focused on nonhuman or veterinary ophthalmology.
 
 ### Data extraction schema (27 variables)
 We extracted **27 variables across six domains**:
@@ -149,7 +147,7 @@ We extracted **27 variables across six domains**:
 
 <p align="center">
   <b>Figure</b>: PRISMA flow diagram<br>
-  <img src="figures/prisma.png" width="400"/>
+  <img src="figures/prisma_2.png" width="400"/>
 </p>
 
 ---
@@ -213,6 +211,8 @@ If this repository is useful for your work, please cite:
 @article{kim2026far,
   title={How Far Have Large Language Models Advanced in Ophthalmology? A Systematic Review of Their Development, Evaluation, and Readiness for Clinical Use},
   author={Kim, Hyunjae and Yin, Yu and Cao, Zhiyuan and Liu, Chen and Li, Anran and Chen, Zhen and Ai, Xuguang and Chung, Younjoon and Ma, Fan and Peng, Xueping and others},
+  journal={Research Square},
+  doi={10.21203/rs.3.rs-8819770/v2},
   year={2026}
 }
 ```
